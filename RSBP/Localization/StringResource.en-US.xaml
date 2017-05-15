@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="AppTitle">OPEN RECORDER</system:String>
+    <system:String x:Key="About">About</system:String>
+    <system:String x:Key="Help">Help</system:String>
+    <system:String x:Key="Record">녹화</system:String>
+    <system:String x:Key="WriteBoard">그리기</system:String>
+
+    <system:String x:Key="Setting">설정</system:String>
+    <system:String x:Key="ScreenShotTootip">화면 스냅샷</system:String>
+    <system:String x:Key="DesktopRecordTooltip1">화면 녹화</system:String>
+    <system:String x:Key="DesktopRecordTooltip2">녹화 폴더 열기</system:String>
+    <system:String x:Key="Configure">설정</system:String>
+    <system:String x:Key="ConfigureTooltip1">초기화</system:String>
+    <system:String x:Key="ConfigureText4">프레임</system:String>
+    <system:String x:Key="ConfigureText5">오디오</system:String>
+    <system:String x:Key="ConfigureText14">녹화 상태</system:String>
+    <system:String x:Key="ConfigureText15">CPU 사용률</system:String>
+
+    <system:String x:Key="BoardDrawPenTooltip">펜</system:String>
+    <system:String x:Key="BoardDrawLineTooltip">라인</system:String>
+    <system:String x:Key="BoardDrawRectangleTooltip">사각형</system:String>
+    <system:String x:Key="BoardDrawEllipseTooltip">원</system:String>
+    <system:String x:Key="BoardDrawLineErase">지우개</system:String>
+    <system:String x:Key="BoardDrawLineSelect">선택</system:String>
+    <system:String x:Key="BoardSelectColor">색상을 선택</system:String>
+    <system:String x:Key="BoardSelectFontSize">폰트 사이즈</system:String>
+
+    <system:String x:Key="RecordResolutionTooltip">낮을수록 녹화 기능이 향상됩니다.</system:String>
+    <system:String x:Key="FrameRateTooltip">낮을수록 녹화 기능이 향상됩니다.</system:String>
+    <system:String x:Key="AudioQualityTooltip">낮을수록 녹화 기능이 향상됩니다.</system:String>
+
+    <system:String x:Key="AppInfo">안내</system:String>
+    <system:String x:Key="AppExitMessage">프로그램을 종료합니다.</system:String>
+    <system:String x:Key="AppMustInstall">필수 구성요소를 설치합니다.\r\n(최초실행시 1회만 수행됩니다.)</system:String>
+    <system:String x:Key="AppMustInstallComplete">필수 구성요소가 설치 되었습니다.</system:String>
+    <system:String x:Key="NoSearchFFmpeg">ffmepg.exe를 찾을 수 없습니다.</system:String>
+    <system:String x:Key="AppCheckDuplicate">프로그램을 실행할 수 없습니다. 이미 실행중 입니다.</system:String>
+
+    <system:String x:Key="WriteBoardString1">도구 상자 모드 설정</system:String>
+    <system:String x:Key="WriteBoardString2">도구 상자 활성</system:String>
+    <system:String x:Key="WriteBoardString3">도구 상자 비활성</system:String>
+
+    <system:String x:Key="WriteBoardString4">기능 선택</system:String>
+    <system:String x:Key="WriteBoardString5">라인 지우기</system:String>
+    <system:String x:Key="WriteBoardString6">라인 선택</system:String>
+    <system:String x:Key="WriteBoardString7">전체 지우기</system:String>
+
+    <system:String x:Key="WriteBoardString8">색상 선택</system:String>
+    <system:String x:Key="WriteBoardString9">그리기 도구</system:String>
+
+    <system:String x:Key="Youtube">유튜브 업로드</system:String>
+    <system:String x:Key="YoutubeUpload">녹화 영상의 업로드 정보를 입력하세요.</system:String>
+    <system:String x:Key="YoutubeTitle">업로드 제목 :</system:String>
+    <system:String x:Key="YoutubeDesc">업로드 설명 :</system:String>
+    <system:String x:Key="YoutubeTags">업로드 테그 :</system:String>
+    <system:String x:Key="YoutubeTagsDesc">(구분자는 (,)입니다.)</system:String>
+    <system:String x:Key="YoutubeCategory">카테고리 :</system:String>
+</ResourceDictionary>
