@@ -175,7 +175,8 @@
                     Margin="4"
                     HorizontalAlignment="Right"
                     Command="{Binding YoutubeUploadCommand}"                    
-                    Style="{DynamicResource ChromelessButtonStyle}">
+                    Style="{DynamicResource ChromelessButtonStyle}"
+                    IsEnabled="False">
                     <iconPacks:PackIconModern Width="40" 
                                                   Height="40"
                                                   Kind="Youtube"/>
@@ -192,7 +193,8 @@
                 <Button Width="40"
                         Height="40"
                         Style="{StaticResource ChromelessButtonStyle}"
-                        Command="{Binding MonitorIdentityCommand}">
+                        Command="{Binding MonitorIdentityCommand}"
+                        ToolTip="{StaticResource ConfigureText16}">
                     <iconPacks:PackIconOcticons Kind="DeviceDesktop" Width="auto" Height="auto"/>                 
                 </Button>
             </StackPanel>

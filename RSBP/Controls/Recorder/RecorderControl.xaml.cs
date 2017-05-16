@@ -67,6 +67,8 @@ namespace RSBP.Controls.Recorder
         {
             this.btnRecord.Visibility = Visibility.Visible;
             this.btnStop.Visibility = Visibility.Collapsed;
+
+            this.YouTubeUpload.IsEnabled = !string.IsNullOrEmpty(recorderViewModel.RecordingFileName);            
         }
 
         private void RecorderViewModel_RecordingStart(object sender)

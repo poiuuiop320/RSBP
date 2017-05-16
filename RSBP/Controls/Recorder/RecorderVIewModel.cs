@@ -33,7 +33,7 @@ namespace RSBP.Controls.Recorder
         public event RecordingStopEvent RecordingStop;
 
         private const string RECORD_FILENAME_KEYWORD = "CREATE_FILE";
-        private string RecordingFileName;
+        public string RecordingFileName { get; private set; }
         #region icommand
         public ICommand InitSettingCommand { get; set; }
         public ICommand AcceptResolutionCommand { get; set; }

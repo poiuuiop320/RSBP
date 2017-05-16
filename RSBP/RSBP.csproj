@@ -79,6 +79,12 @@
     <Reference Include="JWLibrary.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\JWLibrary.Core.1.0.6\lib\net45\JWLibrary.Core.dll</HintPath>
     </Reference>
+    <Reference Include="JWLibrary.FFmpeg, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\JWLibrary.FFmpeg.0.1.1\lib\net45\JWLibrary.FFmpeg.dll</HintPath>
+    </Reference>
+    <Reference Include="JWLibrary.OSI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\JWLibrary.OSI.1.0.0\lib\net45\JWLibrary.OSI.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -227,16 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\JWLibrary\JWLibrary.FFmpeg\JWLibrary.FFmpeg.csproj">
-      <Project>{41464a67-e8bf-4b88-bbcc-ae878b1bd365}</Project>
-      <Name>JWLibrary.FFmpeg</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JWLibrary\JWLibrary.Hardware\JWLibrary.OSI.csproj">
-      <Project>{271ec4ea-adc3-4e97-a1f9-f5da8e578144}</Project>
-      <Name>JWLibrary.OSI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

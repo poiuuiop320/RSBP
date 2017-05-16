@@ -17,8 +17,9 @@
     <system:String x:Key="ConfigureText5">오디오</system:String>
     <system:String x:Key="ConfigureText14">녹화 상태</system:String>
     <system:String x:Key="ConfigureText15">CPU 사용률</system:String>
+    <system:String x:Key="ConfigureText16">주모니터 확인</system:String>
 
-    <system:String x:Key="BoardDrawPenTooltip">펜</system:String>
+    <system:String x:Key="BoardDrawPenTooltip">그리기 창 활성화</system:String>
     <system:String x:Key="BoardDrawLineTooltip">라인</system:String>
     <system:String x:Key="BoardDrawRectangleTooltip">사각형</system:String>
     <system:String x:Key="BoardDrawEllipseTooltip">원</system:String>
