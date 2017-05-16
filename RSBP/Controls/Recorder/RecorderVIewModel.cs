@@ -260,6 +260,9 @@ namespace RSBP.Controls.Recorder
                     fileopen.Close();
                 }
 
+                var isError = false;
+                var message = "";
+
                 using (var fileStream = new FileStream(RecordingFileName, FileMode.Open))
                 {
                     var videosInsertRequest = youtubeService.Videos.Insert(video, "snippet,status", fileStream, "video/*");
@@ -275,6 +278,8 @@ namespace RSBP.Controls.Recorder
                             case UploadStatus.Failed:
                                 progressController.SetMessage(string.Format("An error prevented the upload from completing.\n{0}", progress.Exception));
                                 //Console.WriteLine();
+                                isError = true;
+                                message = progress.Exception.Message;
                                 break;
                         }
                     };
@@ -295,7 +300,10 @@ namespace RSBP.Controls.Recorder
                 }
                 else
                 {
-                    await DialogManager.ShowMessageAsync((MetroWindow)Application.Current.MainWindow, "업로드 완료", "업로드를 완료했습니다.");
+                    if (isError)
+                        await DialogManager.ShowMessageAsync((MetroWindow)Application.Current.MainWindow, "에러 발생", message); 
+                    else
+                        await DialogManager.ShowMessageAsync((MetroWindow)Application.Current.MainWindow, "업로드 완료", "업로드를 완료했습니다.");
                 }
             }
         }

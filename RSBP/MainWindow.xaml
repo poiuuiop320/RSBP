@@ -9,6 +9,7 @@
                       ShowIconOnTitleBar="True"
                       WindowStartupLocation="CenterScreen"                      
                       Title="Open Recorder"
+                      Icon="./Resource/video-recorder-icon-32.png"
                       MinHeight="500"
                       MinWidth="520"
                       Height="500"
