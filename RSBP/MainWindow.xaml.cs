@@ -18,6 +18,8 @@ using RSBP.Controls.Recorder;
 using MahApps.Metro.Controls.Dialogs;
 using RSBP.Controls.WhiteBoard;
 using RSBP.Properties;
+using Microsoft.Win32;
+using WpfScreenHelper;
 
 namespace RSBP
 {
@@ -29,6 +31,7 @@ namespace RSBP
         public MainWindow()
         {
             InitializeComponent();
+            
             this.Closing += MainWindow_Closing;
         }
 

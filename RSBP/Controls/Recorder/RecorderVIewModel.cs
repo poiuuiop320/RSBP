@@ -9,6 +9,7 @@ using JWLibrary.FFmpeg;
 using JWLibrary.OSI;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,8 @@ namespace RSBP.Controls.Recorder
         public event RecordingStopEvent RecordingStop;
 
         private const string RECORD_FILENAME_KEYWORD = "CREATE_FILE";
+        private readonly string SAVE_PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos), "Record");
+
         public string RecordingFileName { get; private set; }
         #region icommand
         public ICommand InitSettingCommand { get; set; }
@@ -311,13 +314,10 @@ namespace RSBP.Controls.Recorder
 
         #region command event
         public void Record()
-        {
-            string exePath = System.IO.Path.Combine(PathInfo.GetApplicationPath(), "ffmpeg.exe");
-            string fileSavePath = System.IO.Path.Combine(RSBP.Properties.Settings.Default.SaveFolderPath, "Record");
-
-            if (!System.IO.Directory.Exists(fileSavePath))
+        {            
+            if (!System.IO.Directory.Exists(SAVE_PATH))
             {
-                System.IO.Directory.CreateDirectory(fileSavePath);
+                System.IO.Directory.CreateDirectory(SAVE_PATH);
             }
 
             string year = DateTime.Now.ToString("yyyy");
@@ -327,7 +327,7 @@ namespace RSBP.Controls.Recorder
             string minuite = DateTime.Now.ToString("mm");
             string second = DateTime.Now.ToString("ss");
 
-            RecordingFileName = Path.Combine(fileSavePath, string.Format(RECORD_FILENAME_KEYWORD + "{0}_{1}_{2}_{3}_{4}_{5}.mp4", year, month, day, hour, minuite, second));
+            RecordingFileName = Path.Combine(SAVE_PATH, string.Format(RECORD_FILENAME_KEYWORD + "{0}_{1}_{2}_{3}_{4}_{5}.mp4", year, month, day, hour, minuite, second));
 
             if (!_ffmpegCav.IsRunning)
             {
@@ -389,15 +389,13 @@ namespace RSBP.Controls.Recorder
 
         public void OpenRecordFolder()
         {
-            string fileSavePath = Path.Combine(RSBP.Properties.Settings.Default.SaveFolderPath, "Record");
-
-            if (!System.IO.Directory.Exists(fileSavePath))
+            if (!System.IO.Directory.Exists(SAVE_PATH))
             {
-                System.IO.Directory.CreateDirectory(fileSavePath);
+                System.IO.Directory.CreateDirectory(SAVE_PATH);
             }
 
             System.Diagnostics.Process prc = new System.Diagnostics.Process();
-            prc.StartInfo.FileName = fileSavePath;
+            prc.StartInfo.FileName = SAVE_PATH;
             prc.Start();
         }
         #endregion command event
